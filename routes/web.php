@@ -1,6 +1,10 @@
 <?php
 
+use App\Models\Post;
+use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
+
+
 
 Route::get('/', function () {
     return view('home', ['title' => 'Home Page']);
@@ -11,23 +15,14 @@ Route::get('/about', function () {
 });
 
 Route::get('/posts', function () {
-    return view('posts', ['title' => 'Blog', 'posts' => [
-        [
-            'title' => 'Judul Artikel 1',
-            'author' => 'Abdul Rohman',
-            'body' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut odit omnis dolor
-            consequatur, ad impedit
-            necessitatibus neque adipisci voluptatibus ab unde consectetur, nesciunt ducimus nisi, esse laboriosam
-            magni. Ea, libero.'
-        ],
-        [
-            'title' => 'Judul Artikel 2',
-            'author' => 'Abdul Rohman',
-            'body' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda repudiandae eos
-            ea facilis ut aspernatur temporibus? Beatae voluptas totam adipisci sed dolorum itaque odio eveniet eaque
-            placeat laudantium, iste exercitationem!'
-        ]
-    ]]);
+    return view('posts', ['title' => 'Blog', 'posts' => Post::all()]);
+});
+
+Route::get('/posts/{slug}', function ($slug) {
+
+    $post = Post::find($slug);
+
+    return view('post', ['title' => 'Single Post', 'post' => $post]);
 });
 
 Route::get('/contact', function () {
