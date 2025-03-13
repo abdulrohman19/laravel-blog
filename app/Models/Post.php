@@ -11,22 +11,23 @@ class Post
         return [
             [
                 'id' => 1,
-                'slug' => 'judul-artikel-1',
-                'title' => 'Judul Artikel 1',
+                'slug' => 'tips-belajar-laravel',
+                'title' => 'Tips Efektif dalam Belajar Laravel untuk Pemula',
                 'author' => 'Abdul Rohman',
-                'body' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut odit omnis dolor
-                consequatur, ad impedit
-                necessitatibus neque adipisci voluptatibus ab unde consectetur, nesciunt ducimus nisi, esse laboriosam
-                magni. Ea, libero.'
+                'body' => 'Laravel adalah salah satu framework PHP paling populer yang digunakan untuk membangun aplikasi web modern. 
+                Untuk pemula, penting untuk memahami konsep dasar seperti routing, middleware, dan Eloquent ORM. 
+                Mulailah dengan membaca dokumentasi resmi Laravel, mengikuti tutorial online, serta mencoba membangun proyek kecil 
+                agar lebih memahami bagaimana Laravel bekerja dalam praktik.'
             ],
             [
                 'id' => 2,
-                'slug' => 'judul-artikel-2',
-                'title' => 'Judul Artikel 2',
+                'slug' => 'manfaat-menggunakan-laravel',
+                'title' => 'Mengapa Harus Menggunakan Laravel dalam Pengembangan Web?',
                 'author' => 'Abdul Rohman',
-                'body' => 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda repudiandae eos
-                ea facilis ut aspernatur temporibus? Beatae voluptas totam adipisci sed dolorum itaque odio eveniet eaque
-                placeat laudantium, iste exercitationem!'
+                'body' => 'Laravel menawarkan banyak fitur unggulan yang membuat pengembangan aplikasi web menjadi lebih cepat dan efisien. 
+                Beberapa manfaat utama Laravel adalah syntax yang bersih dan mudah dibaca, sistem routing yang fleksibel, serta dukungan 
+                untuk fitur keamanan seperti hashing password dan proteksi CSRF. Dengan ekosistem yang kuat dan komunitas yang besar, 
+                Laravel menjadi pilihan utama bagi banyak developer web.'
             ]
         ];
     }
